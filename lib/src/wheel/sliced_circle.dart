@@ -52,6 +52,7 @@ class _CircleSlices extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var background = styleStrategy.getBackground();
     final slices = [
       for (var i = 0; i < items.length; i++)
         Transform.translate(
@@ -67,6 +68,11 @@ class _CircleSlices extends StatelessWidget {
             ),
           ),
         ),
+      if(background != null)
+        Positioned.fill(child: Transform.rotate(
+          alignment: Alignment.center,
+          angle: items[0].angle,
+        )),
     ];
 
     return Stack(

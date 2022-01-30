@@ -71,6 +71,10 @@ abstract class StyleStrategy {
     int index,
     int itemCount,
   );
+
+  Widget? getBackground() {
+    return null;
+  }
 }
 
 /// Mixin to allow style strategies to have a common style for disabled items.
