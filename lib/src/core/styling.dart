@@ -125,7 +125,11 @@ class UniformStyleStrategy
     this.textStyle,
     this.disabledIndices = const <int>[],
   });
-
+  
+  Widget? getBackground() {
+    return null;
+  }
+  
   /// {@macro flutter_fortune_wheel.StyleStrategy.getItemStyle}
   @override
   FortuneItemStyle getItemStyle(ThemeData theme, int index, int itemCount) {
@@ -173,7 +177,11 @@ class AlternatingStyleStrategy
       background,
     );
   }
-
+  
+  Widget? getBackground() {
+    return null;
+  }
+  
   const AlternatingStyleStrategy({
     this.disabledIndices = const <int>[],
   });
